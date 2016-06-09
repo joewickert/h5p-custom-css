@@ -1,5 +1,11 @@
 <?php
 
+/**
+ * @file
+ * A module that provides alternate css for h5p.
+ */
+
+
 function h5p_custom_css_h5p_styles_alter(&$styles, $libraries, $mode) {
   if (isset($libraries['H5P.DragNDrop]) && $libraries['H5P.DragNDrop']['majorVersion'] == '1') {
     $styles[] = (object) array(
