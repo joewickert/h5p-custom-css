@@ -1,1 +1,5 @@
 /* CSS overrides for h5p drag and DragNDrop */
+
+.h5p-joubelui-score-bar {
+  display: none;
+}
