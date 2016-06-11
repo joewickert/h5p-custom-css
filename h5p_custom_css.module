@@ -6,13 +6,21 @@
  */
 
 
-function h5p_custom_css_h5p_styles_alter(&$styles, $libraries, $mode) {
-  if (isset($libraries['H5P.DragNDrop]) && $libraries['H5P.DragNDrop']['majorVersion'] == '1') {
-    $styles[] = (object) array(
-      // Path relative to drupal root
-      'path' => drupal_get_path('module', 'h5p_custom_css') . '/h5p-overrides.css',
-      // Cache buster
-      'version' => '?ver=1',
-    );
-  }
-}
+ function h5p_custom_css_h5p_styles_alter(&$styles, $libraries, $mode) {
+   if (isset($libraries['H5P.MultiChoice']) && $libraries['H5P.MultiChoice']['majorVersion'] == '1') {
+     $styles[] = (object) array(
+       // Path relative to drupal root
+       'path' => drupal_get_path('module', 'h5p_custom_css') . '/h5p-overrides.css',
+       // Cache buster
+       'version' => '?ver=1',
+     );
+   }
+     if (isset($libraries['H5P.DragQuestion']) && $libraries['H5P.DragQuestion']['majorVersion'] == '1') {
+     $styles[] = (object) array(
+       // Path relative to drupal root
+       'path' => drupal_get_path('module', 'h5p_custom_css') . '/h5p-overrides.css',
+       // Cache buster
+       'version' => '?ver=1',
+     );
+   }
+ }
